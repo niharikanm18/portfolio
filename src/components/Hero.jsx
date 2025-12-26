@@ -41,9 +41,6 @@ const Hero = () => {
               className="profile-image"
             />
           </div>
-          <div className="location-badge">
-            <FaMapMarkerAlt /> Plano, TX
-          </div>
         </div>
       </div>
     </section>
