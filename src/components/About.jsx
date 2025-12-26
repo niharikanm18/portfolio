@@ -9,7 +9,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a Data Analyst with <strong>2+ years of experience</strong> in data science, 
+              I'm a Data Analyst with <strong>3+ years of experience</strong> in data science, 
               analytics, and data operations. I specialize in transforming complex data into 
               actionable insights that drive business decisions.
             </p>
@@ -25,7 +25,7 @@ const About = () => {
             </p>
             <div className="about-highlights">
               <div className="highlight-item">
-                <div className="highlight-number">2+</div>
+                <div className="highlight-number">3+</div>
                 <div className="highlight-label">Years Experience</div>
               </div>
               <div className="highlight-item">

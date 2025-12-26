@@ -32,6 +32,21 @@
   line-height: 1.2;
 }
 
+.hero-title .cursor {
+  animation: blink 0.7s infinite;
+  font-weight: 300;
+  color: var(--primary-color);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
 .hero-subtitle {
   font-size: 2rem;
   color: var(--text-light);

@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
+  const [displayedName, setDisplayedName] = useState('');
+  const fullName = 'Niharika Miriyala';
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < fullName.length) {
+        setDisplayedName(fullName.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="hero" className="hero">
       <div className="container hero-content">
         <div className="hero-text">
           <div className="greeting">Hello, I'm</div>
-          <h1 className="hero-title">Niharika Miriyala</h1>
+          <h1 className="hero-title">{displayedName}<span className="cursor">|</span></h1>
           <h2 className="hero-subtitle">Data Analyst & Data Scientist</h2>
           <p className="hero-description">
-            Transforming data into actionable insights with 2+ years of experience 
+            Transforming data into actionable insights with 3+ years of experience 
             in analytics, data science, and data operations
           </p>
           <div className="hero-buttons">
