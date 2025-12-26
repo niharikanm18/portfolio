@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="image-wrapper">
             <img 
-              src="/niharika linkedin image.jpeg" 
+              src="/portfolio/profile.jpeg" 
               alt="Niharika Miriyala" 
               className="profile-image"
             />
