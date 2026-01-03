@@ -9,32 +9,33 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a Data Analyst with <strong>3+ years of experience</strong> in data science, 
-              analytics, and data operations. I specialize in transforming complex data into 
-              actionable insights that drive business decisions.
+              I'm an AI/ML and Data Engineer with <strong>5+ years of experience</strong> building 
+              scalable data and machine learning platforms on AWS. I specialize in LLMOps, RAG systems, 
+              and compliance-first AI pipelines for analytics and GenAI workloads.
             </p>
             <p>
-              Proficient in <strong>Python, SQL, Spark, and Snowflake on AWS</strong>, 
-              I excel at building robust data pipelines, creating insightful BI dashboards, 
-              and implementing comprehensive data governance frameworks.
+              Proficient in <strong>Python, SQL, Airflow, Docker, and Terraform</strong>, I excel at 
+              MLOps automation, feature stores, and vector database integration. My expertise spans 
+              building RAG pipelines, orchestrating ML workflows, and implementing secure, enterprise-grade 
+              AI infrastructure.
             </p>
             <p>
-              I have a strong track record of improving data quality and accelerating insights 
-              for enterprise decision-making. My expertise spans predictive modeling, ETL automation, 
-              and cloud-based data solutions that reduce latency and enhance operational efficiency.
+              I'm passionate about designing reliable, secure, and enterprise-grade AI infrastructure 
+              that accelerates innovation and insight delivery. My work has improved retrieval accuracy 
+              by 38%, reduced query latency by 27%, and enhanced security compliance by 30%.
             </p>
             <div className="about-highlights">
               <div className="highlight-item">
-                <div className="highlight-number">3+</div>
+                <div className="highlight-number">5+</div>
                 <div className="highlight-label">Years Experience</div>
               </div>
               <div className="highlight-item">
-                <div className="highlight-number">40%</div>
-                <div className="highlight-label">Latency Reduction</div>
+                <div className="highlight-number">38%</div>
+                <div className="highlight-label">Retrieval Improvement</div>
               </div>
               <div className="highlight-item">
-                <div className="highlight-number">3</div>
-                <div className="highlight-label">Major Projects</div>
+                <div className="highlight-number">27%</div>
+                <div className="highlight-label">Latency Reduction</div>
               </div>
             </div>
           </div>

@@ -1,43 +1,48 @@
 import React from 'react';
 import { FaPython, FaAws, FaDocker, FaGitAlt, FaDatabase } from 'react-icons/fa';
-import { SiSnowflake, SiTableau, SiPowerbi, SiApachespark, SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiSnowflake, SiTableau, SiPowerbi, SiApachespark, SiTensorflow, SiPytorch, SiKubernetes, SiMongodb, SiRedis, SiElasticsearch, SiPostgresql, SiMysql, SiTerraform, SiJenkins } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Programming',
-      skills: ['Python', 'R', 'SQL', 'JavaScript', 'TypeScript'],
+      title: 'Languages',
+      skills: ['Python', 'SQL', 'Bash', 'PowerShell', '.NET (NpgSQL)'],
       icon: <FaPython />
     },
     {
-      title: 'Data Analytics',
-      skills: ['Predictive Modeling', 'Statistics', 'A/B Testing', 'Data Quality'],
-      icon: <FaDatabase />
+      title: 'ML/AI Frameworks',
+      skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'LangChain', 'LlamaIndex'],
+      icon: <SiTensorflow />
     },
     {
-      title: 'Big Data & ETL',
-      skills: ['Spark', 'Hive', 'Presto', 'Informatica DQ', 'Data Pipelines'],
+      title: 'MLOps/AI',
+      skills: ['MLflow', 'Airflow', 'RAG', 'LLMOps', 'Vector Search', 'Feature Stores'],
       icon: <SiApachespark />
     },
     {
-      title: 'Visualization',
-      skills: ['Power BI', 'Tableau', 'Metrics Design', 'Dashboards'],
-      icon: <SiTableau />
-    },
-    {
-      title: 'Cloud & Tools',
-      skills: ['AWS (S3, EC2, Lambda)', 'Snowflake', 'Docker', 'CI/CD', 'Git'],
+      title: 'Cloud Platforms',
+      skills: ['AWS (S3, EKS, Lambda, Sagemaker)', 'Azure', 'GCP'],
       icon: <FaAws />
     },
     {
-      title: 'Databases',
-      skills: ['SQL Server', 'MySQL', 'PostgreSQL'],
+      title: 'Infrastructure',
+      skills: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'CI/CD', 'IaC'],
+      icon: <FaDocker />
+    },
+    {
+      title: 'Data Engineering',
+      skills: ['ETL', 'Data Modeling', 'Orchestration', 'Observability', 'Compliance Automation'],
       icon: <FaDatabase />
     },
     {
-      title: 'Methods',
-      skills: ['Agile', 'Lean', 'Six Sigma', 'Data Governance'],
+      title: 'Databases',
+      skills: ['PostgreSQL', 'MySQL', 'Snowflake', 'Redis', 'MongoDB', 'ElasticSearch'],
+      icon: <SiPostgresql />
+    },
+    {
+      title: 'Other Tools',
+      skills: ['Datadog', 'Kafka', 'Tableau', 'Git', 'API Development'],
       icon: <FaGitAlt />
     }
   ];

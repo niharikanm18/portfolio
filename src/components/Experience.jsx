@@ -6,39 +6,40 @@ const Experience = () => {
   const experiences = [
     {
       company: 'BNY Mellon',
-      position: 'SQL Developer',
-      location: 'Pittsburgh, PA (Remote)',
+      position: 'Senior AI/ML and Data Engineer',
+      location: 'Remote',
       period: 'Aug 2025 - Present',
       achievements: [
-        'Built Python-SQL-Snowflake data pipelines improving reporting quality and analytics accuracy',
-        'Designed APIs supporting predictive analytics and AI integrations for finance risk forecasting',
-        'Automated metadata and lineage tracking processes, strengthening enterprise data governance',
-        'Delivered BI dashboards that reduced manual reporting by 25% and improved KPI visibility',
-        'Deployed AWS Lambda and Docker CI/CD workflows, cutting release cycles by 30%'
+        'Designed RAG and embedding pipelines with AWS Lambda and vector stores, improving retrieval by 38%',
+        'Automated LLM prompt orchestration using LangChain, reducing query latency by 27%',
+        'Built CI/CD for MLflow models using Terraform and Jenkins to deploy models securely on AWS EKS',
+        'Partnered with DevOps to implement IaC guardrails, encryption, and HIPAA-compliant data flows',
+        'Integrated observability with Datadog to monitor drift, cost, and agentic AI performance metrics'
       ]
     },
     {
       company: 'Wells Fargo',
-      position: 'Data Scientist',
+      position: 'AI/ML Platform and Data Engineer',
       location: 'Richardson, TX',
-      period: 'Jul 2024 - Aug 2025',
+      period: 'Aug 2023 - Aug 2025',
       achievements: [
-        'Automated Python-SQL ETL pipelines, cutting latency by 40% and improving data accuracy',
-        'Built Power BI and Tableau dashboards visualizing KPIs, compliance, and risk performance',
-        'Applied data quality and lineage frameworks to strengthen governance and data reliability',
-        'Delivered insights that optimized customer operations and enhanced product performance'
+        'Engineered ETL and ML pipelines in Airflow and Python for predictive analytics and retraining',
+        'Deployed feature extraction workflows using AWS S3 and Snowflake, enhancing ML efficiency',
+        'Implemented RAG components for document embeddings and retrieval scoring in risk models',
+        'Partnered with ML scientists to optimize inference performance and token usage for GenAI models',
+        'Automated compliance and audit logging with Terraform and AWS Config, improving security by 30%'
       ]
     },
     {
       company: 'Lumen Technologies',
-      position: 'Data Analyst',
+      position: 'Data Analyst Intern',
       location: 'Hyderabad, India',
-      period: 'Mar 2021 - Apr 2022',
+      period: 'Jul 2020 - Aug 2022',
       achievements: [
-        'Optimized SSIS ETL and SQL queries, improving query efficiency and reducing runtime issues',
-        'Built validation scripts ensuring data accuracy, lineage traceability, and report consistency',
-        'Automated Power BI dashboards, reducing manual reporting time by 38% and improving visuals',
-        'Enhanced data governance through Lean processes, improving data ops and compliance synergy'
+        'Developed SQL dashboards and Power BI insights to monitor data quality and operational metrics',
+        'Assisted in AI data preparation and schema optimization, improving model training efficiency by 20%',
+        'Built automation scripts for data validation and integrity checks in ML preprocessing pipelines',
+        'Collaborated with engineers to document RAG schema metadata and performance benchmarks'
       ]
     }
   ];

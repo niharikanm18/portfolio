@@ -26,10 +26,10 @@ const Hero = () => {
         <div className="hero-text">
           <div className="greeting">Hello, I'm</div>
           <h1 className="hero-title">{displayedName}<span className="cursor">|</span></h1>
-          <h2 className="hero-subtitle">Data Analyst & Data Scientist</h2>
+          <h2 className="hero-subtitle">Senior AI/ML and Data Engineer</h2>
           <p className="hero-description">
-            Transforming data into actionable insights with 3+ years of experience 
-            in analytics, data science, and data operations
+            AI/ML and Data Engineer with 5+ years building scalable data and machine learning platforms on AWS. 
+            Experienced in LLMOps, RAG systems, and compliance-first AI pipelines for analytics and GenAI workloads.
           </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Get In Touch</a>
