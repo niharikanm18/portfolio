@@ -6,40 +6,39 @@ const Experience = () => {
   const experiences = [
     {
       company: 'BNY Mellon',
-      position: 'Senior AI/ML and Data Engineer',
+      position: 'Data Scientist and Data Analyst',
       location: 'Remote',
-      period: 'Aug 2025 - Present',
+      period: 'May 2024 - Present',
       achievements: [
-        'Designed RAG and embedding pipelines with AWS Lambda and vector stores, improving retrieval by 38%',
-        'Automated LLM prompt orchestration using LangChain, reducing query latency by 27%',
-        'Built CI/CD for MLflow models using Terraform and Jenkins to deploy models securely on AWS EKS',
-        'Partnered with DevOps to implement IaC guardrails, encryption, and HIPAA-compliant data flows',
-        'Integrated observability with Datadog to monitor drift, cost, and agentic AI performance metrics'
+        'Developed predictive models in Python and SQL to detect fraud and AML risk events',
+        'Built and deployed ML pipelines, improving fraud detection accuracy by 22% and latency by 18%',
+        'Analyzed 50M+ transactions to uncover behavioral anomalies, supporting compliance investigations',
+        'Partnered with Financial Risk Management teams to deliver model insights for fraud prevention',
+        'Presented findings to executives, shaping data-driven anti-fraud strategies and model investments'
       ]
     },
     {
       company: 'Wells Fargo',
-      position: 'AI/ML Platform and Data Engineer',
+      position: 'Software Engineer',
       location: 'Richardson, TX',
-      period: 'Aug 2023 - Aug 2025',
+      period: 'Aug 2022 - May 2024',
       achievements: [
-        'Engineered ETL and ML pipelines in Airflow and Python for predictive analytics and retraining',
-        'Deployed feature extraction workflows using AWS S3 and Snowflake, enhancing ML efficiency',
-        'Implemented RAG components for document embeddings and retrieval scoring in risk models',
-        'Partnered with ML scientists to optimize inference performance and token usage for GenAI models',
-        'Automated compliance and audit logging with Terraform and AWS Config, improving security by 30%'
+        'Built scalable ETL workflows and feature stores powering ML-based fraud detection models',
+        'Applied machine learning to predict suspicious activity, reducing false positives by 25%',
+        'Collaborated with model risk and compliance teams to ensure regulatory and audit adherence',
+        'Created dashboards in Power BI and Tableau for real-time fraud trend visualization'
       ]
     },
     {
       company: 'Lumen Technologies',
-      position: 'Data Analyst Intern',
+      position: 'Software Engineer Intern',
       location: 'Hyderabad, India',
-      period: 'Jul 2020 - Aug 2022',
+      period: 'Jul 2020 - Jul 2022',
       achievements: [
-        'Developed SQL dashboards and Power BI insights to monitor data quality and operational metrics',
-        'Assisted in AI data preparation and schema optimization, improving model training efficiency by 20%',
-        'Built automation scripts for data validation and integrity checks in ML preprocessing pipelines',
-        'Collaborated with engineers to document RAG schema metadata and performance benchmarks'
+        'Designed anomaly detection algorithms for financial data, improving fraud pattern discovery',
+        'Automated SQL and Python data pipelines, cutting report generation time by 35%',
+        'Supported data scientists in developing behavioral models for segmentation and churn prediction',
+        'Communicated findings using visual analytics and concise performance summaries for stakeholders'
       ]
     }
   ];
