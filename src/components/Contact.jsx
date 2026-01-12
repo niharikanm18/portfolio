@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -9,6 +10,12 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: null
+  });
 
   const handleChange = (e) => {
     setFormData({
@@ -17,19 +24,49 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real application, you would send this data to a backend
-    const mailtoLink = `mailto:niharikamiriyala2000@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
-    window.location.href = mailtoLink;
+    setStatus({ submitting: true, submitted: false, error: null });
+
+    try {
+      // Replace these with your EmailJS credentials
+      const serviceId = 'service_dkgixdq';
+      const templateId = 'template_2mbl6ct';
+      const publicKey = 'XZW0dUyXbmvdx-Xqn';
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'niharika1018.work@gmail.co'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setStatus({ submitting: false, submitted: true, error: null });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setStatus({ submitting: false, submitted: false, error: null });
+      }, 5000);
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      setStatus({ 
+        submitting: false, 
+        submitted: false, 
+        error: 'Failed to send message. Please try again or email me directly.' 
+      });
+    }
   };
 
   const contactInfo = [
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      value: 'niharikamiriyala2000@gmail.com',
-      link: 'mailto:niharikamiriyala2000@gmail.com'
+      value: 'niharika1018.work@gmail.com',
+      link: 'mailto:niharika1018.work@gmail.com'
     },
     {
       icon: <FaPhone />,
@@ -98,13 +135,25 @@ const Contact = () => {
               <a href="https://github.com/niharikanm18" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
-              <a href="mailto:niharikamiriyala2000@gmail.com">
+              <a href="mailto:niharika1018.work@gmail.com">
                 <FaEnvelope />
               </a>
             </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
+            {status.submitted && (
+              <div className="success-message">
+                ✓ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            
+            {status.error && (
+              <div className="error-message">
+                ✗ {status.error}
+              </div>
+            )}
+            
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
               <input
@@ -115,6 +164,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="John Doe"
+                disabled={status.submitting}
               />
             </div>
 
@@ -128,6 +178,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="john@example.com"
+                disabled={status.submitting}
               />
             </div>
 
@@ -141,6 +192,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Job Opportunity"
+                disabled={status.submitting}
               />
             </div>
 
@@ -154,11 +206,12 @@ const Contact = () => {
                 required
                 rows="5"
                 placeholder="Your message here..."
+                disabled={status.submitting}
               />
             </div>
 
-            <button type="submit" className="submit-btn">
-              <FaPaperPlane /> Send Message
+            <button type="submit" className="submit-btn" disabled={status.submitting}>
+              <FaPaperPlane /> {status.submitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

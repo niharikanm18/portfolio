@@ -42,7 +42,7 @@ const Hero = () => {
             <a href="https://github.com/niharikanm18" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="mailto:niharikamiriyala2000@gmail.com" aria-label="Email">
+            <a href="mailto:niharika1018.work@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
             <a href="tel:945-900-4356" aria-label="Phone">
